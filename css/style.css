@@ -19,6 +19,7 @@ aside{
 main{
     flex-grow: 1;
     height: 100%;
+    overflow: auto  ;
     background-color: yellow;
 
 }
@@ -28,7 +29,45 @@ main .upgrade{
     background-color: blue;
 }
 
+
+.container-small{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-small .card{
+    width: calc(100% / 6);
+    aspect-ratio: 1/1;
+    background-color: green;
+    border: 1px black dashed;
+}
+
+
 .player{
     background-color: #282828;
     height: 10vh;
+}
+
+
+
+/******************************* 
+             Query mid
+********************************/
+@media screen and (max-width: 879px){
+
+    .container-small .card{
+        width: calc(100% / 4);
+    }
+}
+
+
+
+/******************************* 
+             Query small
+********************************/
+@media screen and (max-width: 639px){
+
+    .container-small .card{
+        width: calc(100% / 2);
+    }
 }
