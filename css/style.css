@@ -3,3 +3,32 @@
     padding: o;
     box-sizing: border-box;
 }
+
+
+.top{
+    display: flex;
+
+    height: 90vh;
+}
+
+aside{
+    width: 230px;
+    background-color: black;
+}
+
+main{
+    flex-grow: 1;
+    height: 100%;
+    background-color: yellow;
+
+}
+
+main .upgrade{
+    height: 90px;
+    background-color: blue;
+}
+
+.player{
+    background-color: #282828;
+    height: 10vh;
+}
