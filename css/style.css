@@ -2,6 +2,7 @@
     margin: 0;
     padding: o;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 
@@ -20,28 +21,81 @@ main{
     flex-grow: 1;
     height: 100%;
     overflow: auto  ;
-    background-color: yellow;
+    background-color: #151922;
 
 }
 
-main .upgrade{
+main .banner{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: calc(100% - 230px);
     height: 90px;
-    background-color: blue;
+
+    text-align: right;
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
+.banner .upgrade{
+    padding: 15px 40px;
+    border: 1px solid white;
+    border-radius: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.upgrade:hover{
+    transform: scale(1.1);
+}
+
+
+.container-big{
+    padding: 90px 20px 20px;
+}
+
+.container-big .filter-list{
+    
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+
+    list-style-type: none;
+
+    width: 100%;
+
+    padding: 22px;
+    
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
 
 .container-small{
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
 }
 
 .container-small .card{
-    width: calc(100% / 6);
+    width: calc(100% / 6 - 16px / 6 * 5);
     aspect-ratio: 1/1;
     background-color: green;
     border: 1px black dashed;
 }
 
+.card img{
+    height: 100%;
+}
 
 .player{
     background-color: #282828;
@@ -56,7 +110,7 @@ main .upgrade{
 @media screen and (max-width: 879px){
 
     .container-small .card{
-        width: calc(100% / 4);
+        width: calc(100% / 4 - 16px / 4 * 3);
     }
 }
 
@@ -68,6 +122,6 @@ main .upgrade{
 @media screen and (max-width: 639px){
 
     .container-small .card{
-        width: calc(100% / 2);
+        width: calc(100% / 2 - 16px / 2);
     }
 }
