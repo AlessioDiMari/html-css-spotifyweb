@@ -13,7 +13,7 @@
 }
 
 aside{
-    width: 230px;
+    min-width: 230px;
     background-color: black;
 }
 
@@ -22,7 +22,7 @@ main{
     height: 100%;
     overflow: auto  ;
     background-color: #151922;
-
+    padding-top: 90px;
 }
 
 main .banner{
@@ -59,14 +59,11 @@ main .banner{
 }
 
 
-.container-big{
-    padding: 90px 20px 20px;
-}
-
-.container-big .filter-list{
+main .filter-list{
     
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
 
     list-style-type: none;
@@ -80,22 +77,61 @@ main .banner{
     color: white;
 }
 
+.filter-list li{
+    opacity: 0.6;
+}
+
+.filter-list li:hover{
+    opacity: 1;
+}
+
+.container-big{
+    padding: 20px;
+}
+
+.container-mid h2{
+    color: white;
+}
+
 .container-small{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    margin-top: 30px;
 }
 
 .container-small .card{
     width: calc(100% / 6 - 16px / 6 * 5);
     aspect-ratio: 1/1;
-    background-color: green;
-    border: 1px black dashed;
 }
 
 .card img{
-    height: 100%;
+    width: 100%;
 }
+
+.card .info{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.info .titolo{
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.info .artista{
+    opacity: 0.6;
+}
+
+
+
+
+
 
 .player{
     background-color: #282828;
@@ -123,5 +159,20 @@ main .banner{
 
     .container-small .card{
         width: calc(100% / 2 - 16px / 2);
+    }
+}
+
+
+/******************************* 
+        Query extra small
+********************************/
+@media screen and (max-width: 552px){
+
+    .top aside{
+        min-width: 50px;
+    }
+
+    main .banner{
+        width: calc(100% - 50px);
     }
 }
